@@ -20,7 +20,16 @@
 <script>
 import eventBus from "@/utils/eventBus";
 import okSvg from "@/assets/icons/ok.svg";
-import bgImg from "@/assets/bg.jpg";
+import bgImg from "@/assets/bg1.jpg";
+import RedisImg from "@/assets/redis.png";
+import nginxSvg from "@/assets/icons/d.svg";
+import redisSvg from "@/assets/icons/redis.svg";
+import NodeSvg from "@/assets/icons/nodejs.svg";
+import computerSvg from "@/assets/icons/computer.svg";
+import oracleSvg from "@/assets/icons/oracle.svg";
+import mysqlSvg from "@/assets/icons/mysql.svg";
+import smartphoneSvg from "@/assets/icons/smartphone.svg";
+import tomcatSvg from "@/assets/icons/tomcat.svg";
 export default {
   data() {
     return {
@@ -29,65 +38,128 @@ export default {
       offsetX: 0,
       offsetY: 0,
       list: [
-        {
-          name: "测试节点",
-          label: "测试节点",
-          size: "170*34",
+      {
+          name: "Mysql",
+          label: "",
+          size: "64*48",
           type: "node",
           x: 0,
           y: 0,
           shape: "customNode",
           color: "#1890ff",
           image:
-            "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
-          stateImage: okSvg,
+            mysqlSvg,
+          backImage: mysqlSvg,
+          inPoints: [[0, 0.5]],
+          outPoints: [[1, 0.5]]
+        },
+        {
+          name: "Oracle",
+          label: "",
+          size: "64*48",
+          type: "node",
+          x: 0,
+          y: 0,
+          shape: "customNode",
+          color: "#1890ff",
+          image:
+            oracleSvg,
+          backImage: oracleSvg,
+          inPoints: [[0, 0.5]],
+          outPoints: [[1, 0.5]]
+        },
+        {
+          name: "Redis",
+          label: "",
+          size: "64*48",
+          type: "node",
+          x: 0,
+          y: 0,
+          shape: "customNode",
+          color: "#1890ff",
+          image:
+            redisSvg,
+
+          backImage: redisSvg,
           inPoints: [[0, 0.5]],
           outPoints: [[1, 0.5]]
         },
 
         {
-          name: "背景图片节点",
-          label: "背景图片节点",
-          size: "170*34",
+          name: "Nginx",
+          label: "",
+          size: "64*48",
           type: "node",
           x: 0,
           y: 0,
           shape: "customNode",
           color: "#1890ff",
           image:
-            "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
+            nginxSvg,
           stateImage: okSvg,
           backImage: bgImg,
           inPoints: [[0, 0.5]],
           outPoints: [[1, 0.5]]
         },
         {
-          name: "双输出节点",
-          label: "双输出节点",
-          size: "170*34",
+          name: "Nodejs",
+          label: "",
+          size: "64*64",
           type: "node",
           x: 0,
           y: 0,
           shape: "customNode",
           color: "#1890ff",
           image:
-            "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
-          stateImage: okSvg,
+            NodeSvg,
+
+          backImage: NodeSvg,
           inPoints: [[0, 0.5]],
           outPoints: [[1, 0.4], [1, 0.6]]
         },
         {
-          name: "大型节点",
-          label: "大型节点",
-          size: "340*34",
+          name: "Tomcat",
+          label: "",
+          size: "64*64",
           type: "node",
           x: 0,
           y: 0,
           shape: "customNode",
           color: "#1890ff",
           image:
-            "https://gw.alipayobjects.com/zos/rmsportal/czNEJAmyDpclFaSucYWB.svg",
-          stateImage: okSvg,
+            tomcatSvg,
+
+          backImage: tomcatSvg,
+          inPoints: [[0, 0.5]],
+          outPoints: [[1, 0.4], [1, 0.6]]
+        },
+        {
+          name: "PC",
+          label: "",
+          size: "64*48",
+          type: "node",
+          x: 0,
+          y: 0,
+          shape: "customNode",
+          color: "#1890ff",
+          image:
+            computerSvg,
+          backImage: computerSvg,
+          inPoints: [[0, 0.5]],
+          outPoints: [[1, 0.5]]
+        },
+        {
+          name: "Smartphone",
+          label: "",
+          size: "64*48",
+          type: "node",
+          x: 0,
+          y: 0,
+          shape: "customNode",
+          color: "#1890ff",
+          image:
+            smartphoneSvg,
+          backImage: smartphoneSvg,
           inPoints: [[0, 0.5]],
           outPoints: [[1, 0.5]]
         },
@@ -179,7 +251,7 @@ export default {
   color: rgba(0, 0, 0, 0.65);
   border-radius: 4px;
   width: 160px;
-  height: 28px;
+  height: 48px;
   line-height: 26px;
   padding-left: 8px;
   border: 1px solid rgba(0, 0, 0, 0);
@@ -192,8 +264,8 @@ export default {
 }
 
 .itempannel .pannel-type-icon {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
